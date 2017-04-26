@@ -19,7 +19,8 @@ services:
     image: mysql:5.7
     restart: always
     volumes:
-       - db_data:/var/lib/mysql
+       - ./db-data:/var/lib/mysql
+       - ./db-etc:/etc/mysql/
     environment:
       MYSQL_ROOT_PASSWORD: p4ssw0rd!
     networks:
